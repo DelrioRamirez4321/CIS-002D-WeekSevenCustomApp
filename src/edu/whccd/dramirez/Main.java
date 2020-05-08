@@ -23,7 +23,7 @@ public class Main {
 
         Scanner sc3 = new Scanner(System.in);
         System.out.print("Enter grade (0-100): ");
-        Double grade3 = sc3.nextDouble();
+        double grade3 = sc3.nextDouble();
 
         Scanner sc4 = new Scanner(System.in);
         System.out.print("Enter grade (0-100): ");
@@ -32,13 +32,7 @@ public class Main {
         Scanner sc5 = new Scanner(System.in);
         System.out.print("Enter grade (0-100): ");
         double grade5 = sc5.nextDouble();
-
-        ArrayList<Double> grades;grades = new ArrayList<>(6);
-        grades.add(grade1);
-        grades.add(grade2);
-        grades.add(grade3);
-        grades.add(grade4);
-        grades.add(grade5);
+        double[] grades = {grade1, grade2,grade3,grade4,grade5} ;
 
         System.out.println( "\n" +"**********************************************" + "\n");
 
@@ -46,12 +40,12 @@ public class Main {
         System.out.println("Used a for loop to Iterate through the grades Array" + "\n");
 
         double total = 0;
-        for(double grade : grades){
+        for (double grade : grades) {
             total += grade;
             System.out.println(grade);
         }
-        double average = total / grades.size();
-        System.out.println("Grades length: " + grades.size());
+        double average = total / grades.length;
+        System.out.println("Grades length: " + grades.length);
         System.out.println("Grade Total: " + total );
         System.out.println("Grade Average: " + average);
 
